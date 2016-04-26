@@ -2,7 +2,12 @@
 <html>
 	<head>
 		<title>Hank Quinlan, Horrible Cop</title>
-		<link rel="stylesheet type="text/css" href="/css/main.css">
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  		<link rel="stylesheet type="text/css" href="/css/main.css">
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <style>
+    #map{ height: 100% }
+  </style>
 	</head>
 	<body>
 		<nav>
@@ -19,6 +24,23 @@
 				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
+		<div id="map"></div>
+		<script>
+
+  // initialize the map
+  var map = L.map('map').setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  	</script>
+		
+		
 		<footer>
     		<ul>
         		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
