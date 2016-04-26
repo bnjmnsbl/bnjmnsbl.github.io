@@ -22,25 +22,26 @@
 				<p>I am a police officer. Welcome to my personal website</p>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
-		<div id="map" style="height:180px"></div>
+		<div id="map" style="height:400px"></div>
 		
 		<script>
 
 
-		  var map = L.map('map').setView([52.31, 13.24], 13);
+		  var map = L.map('map').setView([52.510347, 13.330035], 13);
 
   			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 17,
       minZoom: 9
     }).addTo(map);
 
+	var marker = L.marker([52.510347, 13.330035]).addTo(map);
   	</script>
 		
 		
 		<footer>
     		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+        		<li><a href="mailto:seitz@alexander.de">email</a></li>
+        		<li><a href="https://github.com/bnjmnsbl">github.com/bnjmnsbl</a></li>
 			</ul>
 		</footer>
 	</body>
