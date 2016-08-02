@@ -11,23 +11,16 @@
 	
 	<body>
 	
-		<nav>
-    		<ul>
-        		<li><a href="/">Not</a></li>
-	        	<li><a href="/about">yet</a></li>
-        		<li><a href="/cv">Click</a></li>
-        		<li><a href="/blog">Here</a></li>
-    		</ul>
-		</nav>
+		
 		<div class="container">
     		<div class="blurb">
         		<h1>Schuleinzugsgebiete</h1>
-				<p>Subtitle</p>
+				
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		
 		
-		<div id="map" style="height:400px"></div>
+		<div id="map" style="height:600px"></div>
 		
 		<script>
 
@@ -44,8 +37,16 @@
       minZoom: 9
     }).addTo(map);
 
+
+    
 $.getJSON("ESB.json",function(hoodData){
-  L.geoJson( hoodData ).addTo(map);
+
+var myStyle = {
+    "color": "#1E3791",
+    "weight": 1,
+    "opacity": 0.85 };
+    
+  L.geoJson( hoodData, {style: myStyle} ).addTo(map);
 });
 
 
