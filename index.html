@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
   		<link rel="stylesheet" type="text/css" href="css/main.css">
   		 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>	
+		<script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
 		
 	</head>
 	
@@ -38,11 +39,20 @@
       minZoom: 9
     }).addTo(map);
 
+var geojsonLayer = new L.GeoJSON.AJAX("einzug.json");       
+geojsonLayer.addTo(map);
+
+	/*var marker = L.marker([52.510347, 13.330035]).addTo(map); -- dont need this */
+  	
+  	
   	
   	</script>
+	
+
 		
 		<footer>
     		<ul>
+        		<li><a href="mailto:bla@blub.de">email</a></li>
         		<li><a href="https://github.com/bnjmnsbl">github.com/bnjmnsbl</a></li>
 			</ul>
 		</footer>
