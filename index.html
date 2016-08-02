@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Alexander Seitz, Horrible Cop</title>
+		<title>Schuleinzugsgebiete</title>
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-  		<link rel="stylesheet type="text/css" href="/css/main.css">
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-
+  		<link rel="stylesheet" type="text/css" href="css/main.css">
+  		 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>	
+		<script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+		
 	</head>
+	
 	<body>
+	
 		<nav>
     		<ul>
-        		<li><a href="/">Nothing</a></li>
-	        	<li><a href="/about">To</a></li>
+        		<li><a href="/">Not</a></li>
+	        	<li><a href="/about">yet</a></li>
         		<li><a href="/cv">Click</a></li>
         		<li><a href="/blog">Here</a></li>
     		</ul>
 		</nav>
 		<div class="container">
     		<div class="blurb">
-        		<h1>Alexander Seitz</h1>
-				<p>I am a police officer. Welcome to my personal website</p>
+        		<h1>Schuleinzugsgebiete</h1>
+				<p>Einzugsgebiete der Grundschulen</p>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
+		
+		
 		<div id="map" style="height:400px"></div>
 		
 		<script>
@@ -34,13 +39,20 @@
       minZoom: 9
     }).addTo(map);
 
-	var marker = L.marker([52.510347, 13.330035]).addTo(map);
+var geojsonLayer = new L.GeoJSON.AJAX("einzug.json");       
+geojsonLayer.addTo(map);
+
+	/*var marker = L.marker([52.510347, 13.330035]).addTo(map); -- dont need this */
+  	
+  	
+  	
   	</script>
-		
+	
+
 		
 		<footer>
     		<ul>
-        		<li><a href="mailto:alexander@seitz.de">email</a></li>
+        		<li><a href="mailto:bla@blub.de">email</a></li>
         		<li><a href="https://github.com/bnjmnsbl">github.com/bnjmnsbl</a></li>
 			</ul>
 		</footer>
