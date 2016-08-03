@@ -39,7 +39,7 @@
 
 
     
-$.getJSON("ESB.json",function(hoodData){
+$.getJSON("ESB2.json",function(hoodData){
 
 var myStyle = {
     "color": "#1E3791",
@@ -47,6 +47,16 @@ var myStyle = {
     "opacity": 0.85 };
     
   L.geoJson( hoodData, {style: myStyle} ).addTo(map);
+});
+
+$.getJSON("bezirke.geojson",function(bezData){
+
+var myStyle = {
+    "color": "red",
+    "weight": 2,
+    };
+    
+  L.geoJson( bezData, {style: myStyle} ).addTo(map);
 });
 
 
