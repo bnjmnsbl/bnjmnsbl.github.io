@@ -34,24 +34,47 @@
     }).addTo(map);
 
 
-$.getJSON("ESB2.json",function(hoodData){
+$.getJSON("ESB2.json",function(schulData){
 
 var myStyle = {
     "color": "#1E3791",
     "weight": 1,
     "opacity": 0.85 };
     
-  L.geoJson( hoodData, {
+  L.geoJson(schulData, {
   	style: myStyle,
     onEachFeature: function( feature, layer ){
       layer.bindPopup(feature.properties.Name + feature.properties.description)
     }
   }).addTo(map);
- 
-var ew06 = feature.properties.description 	
-  	   	
+	   	
 });
 
+
+$.getJSON("schulen.geojson",function(data){
+  
+  var schoolIcon = L.icon({
+    iconUrl: 'img/school.png',
+    iconSize: [30,25]
+  });
+  
+  L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties.schulart == "Grundschule";
+            }
+        }).addTo(map);
+        
+       
+
+  
+ /* L.geoJson(data,{
+    pointToLayer: function(feature,latlng){
+    var marker = L.marker(latlng,{icon: schoolIcon});
+    marker.bindPopup(feature.properties.schulname);
+	  return marker;
+    }
+  }).addTo(map);*/
+});
 
 
 /*
