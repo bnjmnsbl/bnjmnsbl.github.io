@@ -9,76 +9,20 @@
 			
 		<div class="container">
     			<h1>This page intentionally left blank.</h1>
-		</div><!-- /.container -->
-		
-		
-		<!--div id="map" style="height:600px"></div-->
-		
-		<!--script>
-		
-    var map = L.map('map').setView([52.48, 13.36], 11);
-		var attr = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'  
-		var tileURL = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'	 	 
-  		
-  		
-  		L.tileLayer(tileURL, { attribution: attr,
-      maxZoom: 17,
-      minZoom: 9
-    }).addTo(map);
+		</div><!--
 
+      CityLab Vorstellung
+      https://youtu.be/UYHMyqggo8k
 
-$.getJSON("ESB2.json",function(schulData){
+      https://www.youtube.com/watch?v=aeMZ9WeWUXk
 
-var myStyle = {
-    "color": "#1E3791",
-    "weight": 1,
-    "opacity": 0.85 };
-    
-  L.geoJson(schulData, {
-  	style: myStyle,
-    onEachFeature: function( feature, layer ){
-      layer.bindPopup(feature.properties.Name + feature.properties.description)
-    }
-  }).addTo(map);
-	   	
-});
+      https://www.wiwo.de/politik/deutschland/experte-ueber-digitale-verwaltung-das-problem-ist-eindeutig-die-umsetzung/22888100.html
 
+      https://tictec.mysociety.org/2019/presentation/open-data-berlin
 
-$.getJSON("schulen.geojson",function(data){
-  
-  var schoolIcon = L.icon({
-    iconUrl: 'img/school.png',
-    iconSize: [30,25]
-  });
-  
+      
 
- L.geoJson(data,{
-    pointToLayer: function(feature,latlng) {
-    
-    var marker = L.marker(latlng,{icon: schoolIcon});
-
-    marker.bindPopup(feature.properties.schulname);
-	  return marker;
-    },
-    
-    filter: function(feature, layer) {
-                return feature.properties.schulart == "Grundschule";
-            }
-  }).addTo(map);
-});
-
-
-/*
-Bezirksgrenzen
-$.getJSON("bezirke.geojson",function(bezData){
-
-var myStyle = {
-    "color": "red",
-    "weight": 2,
-    };
-    
-  L.geoJson( bezData, {style: myStyle} ).addTo(map);
-});
+    -->
 */
 
 
